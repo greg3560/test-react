@@ -6,6 +6,7 @@ Integrate the screen below as best as you can.
 - Parse the response
 - Create any Components you might find necessary as the layout with logo, name, address and maxoffer amount will be reused.
 - Add a loader and error handling in case the network is slow or api is down.
+- Add a link, button or pull-to-refresh to update the Shop list content in one click.
 - You can use Typescript, Redux, StyledComponents... or any other package you might find useful and helpful.
 
 ## Rules to follow
