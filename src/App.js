@@ -21,13 +21,12 @@ class App extends Component {
     }
 
     componentDidMount() {
-        setTimeout(() => {
-            axios.get(process.env.API_URL)
-                .then(res => {
-                    const persons = res.data;
-                    this.setState({persons});
-                })
-        }, 10000);
+        axios.get(process.env.API_URL)
+            .then(res => {
+                console.log('response', res.data.results);
+                const persons = res.data.results;
+                this.setState({persons});
+            });
 
     }
 
