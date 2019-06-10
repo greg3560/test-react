@@ -1,4 +1,18 @@
 import { createMuiTheme } from '@material-ui/core/styles';
+import latottf2 from './src/fonts/lato/Lato-Regular.ttf';
+
+const lato = {
+    fontFamily: 'lato',
+    fontStyle: 'normal',
+    fontDisplay: 'swap',
+    fontWeight: 400,
+    src: `
+    local('lato'),
+    local('Lato-Regular'),
+    url(${latottf2}) format('ttf')
+  `,
+    unicodeRange: 'U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF',
+};
 
 const theme = createMuiTheme({
     "breakpoints": {
@@ -63,7 +77,7 @@ const theme = createMuiTheme({
     "typography": {
         "headline": {
             "color": "rgba(0, 0, 0, 0.87)",
-            "fontFamily": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
+            "fontFamily": "\"lato\", \"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
             "lineHeight": "1.35417em",
             "fontSize": "1.5rem",
             "fontWeight": 400
@@ -71,7 +85,7 @@ const theme = createMuiTheme({
         "display2": {
             "marginLeft": "-.02em",
             "color": "rgba(0, 0, 0, 0.54)",
-            "fontFamily": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
+            "fontFamily": "\"lato\", \"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
             "lineHeight": "1.13333em",
             "fontSize": "2.8125rem",
             "fontWeight": 400
@@ -80,7 +94,7 @@ const theme = createMuiTheme({
         "display3": {
             "marginLeft": "-.02em",
             "color": "rgba(0, 0, 0, 0.54)",
-            "fontFamily": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
+            "fontFamily": "\"lato\", \"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
             "letterSpacing": "-.02em",
             "lineHeight": "1.30357em",
             "fontSize": "3.5rem",
@@ -89,7 +103,7 @@ const theme = createMuiTheme({
         "display4": {
             "marginLeft": "-.04em",
             "color": "rgba(0, 0, 0, 0.54)",
-            "fontFamily": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
+            "fontFamily": "\"lato\", \"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
             "letterSpacing": "-.04em",
             "lineHeight": "1.14286em",
             "fontSize": "7rem",
@@ -98,7 +112,7 @@ const theme = createMuiTheme({
         "fontWeightRegular": 400,
         "display1": {
             "color": "rgba(0, 0, 0, 0.54)",
-            "fontFamily": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
+            "fontFamily": "\"lato\", \"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
             "lineHeight": "1.20588em",
             "fontSize": "2.125rem",
             "fontWeight": 400
@@ -106,21 +120,21 @@ const theme = createMuiTheme({
         "button": {
             "textTransform": "uppercase",
             "color": "rgba(0, 0, 0, 0.87)",
-            "fontFamily": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
+            "fontFamily": "\"lato\", \"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
             "fontSize": "0.875rem",
             "fontWeight": 500
         },
-        "fontFamily": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
+        "fontFamily": "\"lato\", \"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
         "body2": {
             "color": "rgba(0, 0, 0, 0.87)",
-            "fontFamily": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
+            "fontFamily": "\"lato\", \"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
             "lineHeight": "1.71429em",
             "fontSize": "0.875rem",
             "fontWeight": 500
         },
         "caption": {
             "color": "rgba(0, 0, 0, 0.54)",
-            "fontFamily": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
+            "fontFamily": "\"lato\", \"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
             "lineHeight": "1.375em",
             "fontSize": "0.75rem",
             "fontWeight": 400
@@ -129,21 +143,21 @@ const theme = createMuiTheme({
         "fontWeightMedium": 500,
         "title": {
             "color": "rgba(0, 0, 0, 0.87)",
-            "fontFamily": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
+            "fontFamily": "\"lato\", \"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
             "lineHeight": "1.16667em",
             "fontSize": "1.3125rem",
             "fontWeight": 500
         },
         "subheading": {
             "color": "rgba(0, 0, 0, 0.87)",
-            "fontFamily": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
+            "fontFamily": "\"lato\", \"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
             "lineHeight": "1.5em",
             "fontSize": "1rem",
             "fontWeight": 400
         },
         "body1": {
             "color": "rgba(0, 0, 0, 0.87)",
-            "fontFamily": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
+            "fontFamily": "\"lato\", \"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
             "lineHeight": "1.46429em",
             "fontSize": "0.875rem",
             "fontWeight": 400
@@ -210,7 +224,7 @@ const theme = createMuiTheme({
             "active": "rgba(0, 0, 0, 0.54)"
         },
         "primary": {
-            "main": "#3f51b5",
+            "main": "#4A90E2",
             "light": "rgb(101, 115, 195)",
             "dark": "rgb(44, 56, 126)",
             "contrastText": "#fff"
