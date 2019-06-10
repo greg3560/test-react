@@ -1,4 +1,4 @@
 import { createStore } from 'redux';
-import reducerFunction from './Reducers/reducer';
+import refreshShops from './Reducers/refreshShops';
 
-export default createStore(reducerFunction);
+export default createStore(refreshShops);

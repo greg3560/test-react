@@ -3,7 +3,9 @@ import {Provider} from 'react-redux';
 import Store from './Store/configureStore';
 import axios from 'axios';
 import {withStyles} from '@material-ui/styles';
-import BallSpinner from './icon/BallSpinner';
+import { MuiThemeProvider } from '@material-ui/core/styles';
+import theme from "../muiTheme";
+import Shop from './components/Shop';
 
 const styles = {
     root: {
@@ -35,12 +37,9 @@ class App extends Component {
         return (
             <div className={classes.root}>
                 <Provider store={Store}>
-                    <h1>Hello world!</h1>
-                    {this.state.persons.length > 0 ? (
-                        <ul>{this.state.persons.map(person => <li>{person.name}</li>)}</ul>
-                    ) : (
-                        <BallSpinner/>
-                    )}
+                    <MuiThemeProvider theme={theme}>
+                        <Shop/>
+                    </MuiThemeProvider>
                 </Provider>
             </div>
         );
