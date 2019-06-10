@@ -6,6 +6,7 @@ import {withStyles} from '@material-ui/styles';
 import { MuiThemeProvider } from '@material-ui/core/styles';
 import theme from "../muiTheme";
 import Shop from './components/Shop';
+import ButtonAppBar from './components/ButtonAppBar';
 
 const styles = {
     root: {
@@ -38,6 +39,7 @@ class App extends Component {
             <div className={classes.root}>
                 <Provider store={Store}>
                     <MuiThemeProvider theme={theme}>
+                        <ButtonAppBar />
                         <Shop/>
                     </MuiThemeProvider>
                 </Provider>
