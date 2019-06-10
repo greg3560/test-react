@@ -22,13 +22,26 @@ const styles = theme => ({
 });
 
 class ButtonAppBar extends Component {
+
+    constructor(props) {
+        super(props);
+        this.handleRefreshClick = this.handleRefreshClick.bind(this);
+    }
+
+    handleRefreshClick() {
+        fetchShops.then((shops) => {
+            const action = { type: "REFRESH_SHOPS", value: shops };
+            this.props.dispatch(action);
+        });
+    }
+
     render() {
         const {classes} = this.props;
         return (
             <div className={classes.root}>
                 <AppBar position="fixed">
                     <Toolbar>
-                        <IconButton edge="start" className={classes.menuButton} color="inherit">
+                        <IconButton edge="start" className={classes.menuButton} color="inherit" onClick={this.handleRefreshClick}>
                             <RefreshIcon />
                         </IconButton>
                         <Typography variant="h6" className={classes.title}>
@@ -47,4 +60,4 @@ const mapStateToProps = (state) => {
     }
 };
 
-export default withStyles(styles)(ButtonAppBar);
+export default connect(mapStateToProps)(withStyles(styles)(ButtonAppBar));

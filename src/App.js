@@ -23,16 +23,6 @@ class App extends Component {
         };
     }
 
-    componentDidMount() {
-        axios.get(process.env.API_URL)
-            .then(res => {
-                console.log('response', res.data.results);
-                const persons = res.data.results;
-                this.setState({persons});
-            });
-
-    }
-
     render() {
         const {classes} = this.props;
         return (
