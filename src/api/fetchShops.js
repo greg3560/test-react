@@ -15,7 +15,7 @@ const fetchShops = new Promise(function (resolve, reject) {
         }).then(response => {
         resolve(response.data.results);
     }).catch(error => {
-        console.log(error);
+        reject(error);
     });
 });
 

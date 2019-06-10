@@ -7,6 +7,7 @@ import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 import BallSpinner from '../icon/BallSpinner';
 import {withStyles} from '@material-ui/styles';
+import AlertDialog from './AlertDialog';
 import { connect } from 'react-redux';
 import fetchShops from '../api/fetchShops';
 
@@ -23,10 +24,6 @@ const styles = theme => ({
         display: 'block',
         width: '100%',
         textAlign: 'center'
-    },
-    logo: {
-        width: '40px',
-        height: '40px'
     }
 });
 
@@ -42,8 +39,11 @@ class SimpleTable extends Component {
 
     componentDidMount() {
         fetchShops.then((shops) => {
+            this.setState({shops});
             const action = { type: "REFRESH_SHOPS", value: shops };
             this.props.dispatch(action);
+        }).catch(error => {
+            this.setState({error: true});
         });
     }
 
@@ -53,6 +53,16 @@ class SimpleTable extends Component {
         const {classes} = this.props;
         return (
             <Paper className={classes.root}>
+                {this.state.error ?
+                    <div>
+                        <AlertDialog
+                            open={true}
+                            message={this.state.errorMessage}
+                        />
+                    </div>
+                    :
+                    null
+                }
 
                 {this.props.shops.length > 0 ? (
 
@@ -67,14 +77,14 @@ class SimpleTable extends Component {
                         </TableHead>
                         <TableBody>
                             {this.props.shops.map(shop => (
-                            <TableRow key={shop.name}>
-                                <TableCell component="th" scope="row">
-                                    <img className={classes.logo} alt={'logo'} src={shop.logo} />
-                                </TableCell>
-                                <TableCell align="center">{shop.name}</TableCell>
-                                <TableCell align="center">{shop.address}</TableCell>
-                                <TableCell align="center">{shop.maxoffer}</TableCell>
-                            </TableRow>
+                                <TableRow key={shop.name}>
+                                    <TableCell component="th" scope="row">
+                                        {shop.name}
+                                    </TableCell>
+                                    <TableCell align="center">{shop.name}</TableCell>
+                                    <TableCell align="center">{shop.name}</TableCell>
+                                    <TableCell align="center">{shop.name}</TableCell>
+                                </TableRow>
                             ))}
                         </TableBody>
                     </Table>
