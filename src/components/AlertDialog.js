@@ -7,7 +7,6 @@ import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
 
 function AlertDialog(props) {
-    console.log('props', props.open);
     const [open, setOpen] = React.useState(false);
 
     function handleClickOpen() {

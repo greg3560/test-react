@@ -1,6 +1,5 @@
 import React, {Component} from "react";
 import {withStyles} from '@material-ui/styles';
-import * as Scroll from 'react-scroll';
 import { Link, Element , Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll';
 import ArrowUp from '../icon/ArrowUp';
 

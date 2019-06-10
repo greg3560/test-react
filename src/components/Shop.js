@@ -77,7 +77,7 @@ class SimpleTable extends Component {
                         </TableHead>
                         <TableBody>
                             {this.props.shops.map(shop => (
-                                <TableRow key={shop.name}>
+                                <TableRow key={shop.id}>
                                     <TableCell component="th" scope="row">
                                         {shop.name}
                                     </TableCell>
