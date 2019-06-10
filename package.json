@@ -1,0 +1,41 @@
+{
+  "name": "test-react",
+  "version": "1.0.0",
+  "description": "Integrate the screen below as best as you can.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+		"start": "webpack-dev-server --mode development"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LesHabitues/test-react.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LesHabitues/test-react/issues"
+  },
+  "homepage": "https://github.com/LesHabitues/test-react#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.1.0",
+    "@babel/core": "^7.1.0",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.2",
+    "css-loader": "^1.0.0",
+    "dotenv": "^8.0.0",
+    "style-loader": "^0.23.0",
+    "webpack": "^4.19.1",
+    "webpack-cli": "^3.1.1",
+    "webpack-dev-server": "^3.7.1"
+  },
+  "dependencies": {
+    "@material-ui/core": "^4.0.0-rc.0",
+    "axios": "^0.19.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-redux": "^7.0.3",
+    "redux": "^4.0.1"
+  }
+}
